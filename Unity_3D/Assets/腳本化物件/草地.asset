@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: "\u8349\u5730"
   m_EditorClassIdentifier: 
   hp: 3
-  objDrop: {fileID: 0}
+  objDrop: {fileID: 412373378443782640, guid: 59489c9b5f4528141bd44b311fbd6f09, type: 3}

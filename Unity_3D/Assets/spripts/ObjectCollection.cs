@@ -6,7 +6,8 @@ public class ObjectCollection : MonoBehaviour
 {
     [Header("採集物件資料")]
     public DataCollection data;
-
+    [Header("採集物爆炸")]
+    public GameObject ObjExplosion;
     private float hp;
 
     private void Start()
@@ -23,14 +24,16 @@ public class ObjectCollection : MonoBehaviour
 
         if (hp <= 0) Dead();
     }
-        
-    
+
+
     /// <summary>
     /// 採集物件毀損死亡
     /// </summary>
     private void Dead()
     {
         Destroy(gameObject);
+        Instantiate(data.objDrop, transform.position, Quaternion.Euler(0, 45, 0));
+        Instantiate(ObjExplosion, transform.position, Quaternion.identity);
     }
 
 

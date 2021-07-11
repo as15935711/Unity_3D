@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8b6f37e316eb1c848bbb6b52110a2c9a, type: 2}
+  ObjExplosion: {fileID: 6488365136089514944, guid: e7ea8d0937c329a48930f84dba41bae8,
+    type: 3}
