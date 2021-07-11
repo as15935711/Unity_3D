@@ -24,7 +24,7 @@ public class TerrainGenerator : MonoBehaviour
     /// <summary>
     /// 用於存放地形物件，按順序為0草地、1泥土、2洞穴、3石頭、4岩漿
     /// </summary>
-    [Header("地形物件:0 草地、1 泥土、2 洞穴、3 石頭、4 岩漿")]
+    [Header("地形物件:0 草地、1 泥土、2 石頭、3 洞穴、4 岩漿")]
     public GameObject[] objTerrains;
 
     [Header("玩家")]

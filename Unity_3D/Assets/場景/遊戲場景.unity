@@ -2105,6 +2105,7 @@ GameObject:
   - component: {fileID: 839362192}
   - component: {fileID: 839362194}
   - component: {fileID: 839362193}
+  - component: {fileID: 839362195}
   m_Layer: 5
   m_Name: "\u9053\u5177\u6B04"
   m_TagString: Untagged
@@ -2172,6 +2173,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839362191}
   m_CullTransparentMesh: 0
+--- !u!225 &839362195
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839362191}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &992267676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,8 +2450,8 @@ MonoBehaviour:
   objTerrains:
   - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
   - {fileID: 2806356451680697377, guid: c6b47ef76e929d7499236c2849661931, type: 3}
-  - {fileID: 6618216338075649295, guid: 87fbf8311a3c05549bae3ffc7be4da17, type: 3}
   - {fileID: 5790737090852940540, guid: 1577307f328ed3f4991983903d25e234, type: 3}
+  - {fileID: 6618216338075649295, guid: 87fbf8311a3c05549bae3ffc7be4da17, type: 3}
   - {fileID: 4822784874688377755, guid: 07cdfde1d3dd80347a5ef8802aa63ddd, type: 3}
   traPlayer: {fileID: 2613019729521376361, guid: bcc1d846e8040f945b0426791bec1b64,
     type: 3}
