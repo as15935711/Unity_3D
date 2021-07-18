@@ -7,17 +7,18 @@ public class InventoryItem : MonoBehaviour
     /// 是否有道具
     /// </summary>
     public bool hasProp;
-
+    [HideInInspector]
     /// <summary>
     /// 道具圖示
     /// </summary>
-    private Image imgProp;
+    public Image imgProp;
+    [HideInInspector]
     /// <summary>
     /// 道具數量
     /// </summary>
-    private Text textProp;
+    public Text textProp;
 
-    private void Start()
+    private void Awake()
     {
         imgProp = transform.Find("道具圖示").GetComponent<Image>();
         textProp = transform.Find("道具數量").GetComponent<Text>();
