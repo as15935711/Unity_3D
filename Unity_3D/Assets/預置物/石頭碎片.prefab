@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7385750415463100477}
   - component: {fileID: -4561653081608524732}
   - component: {fileID: -8735095730656367475}
+  - component: {fileID: 5067049659696662511}
   m_Layer: 0
   m_Name: "\u77F3\u982D\u788E\u7247"
-  m_TagString: Untagged
+  m_TagString: "\u53EF\u4EE5\u5403\u7684\u9053\u5177"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,3 +124,17 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 5, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!114 &5067049659696662511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6840372341757329112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec419a1635adbb44fa5afeac123245b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprProp: {fileID: 21300000, guid: 2dc93a37bd5bc91468e0244a084d6d88, type: 3}
+  goProp: {fileID: 5790737090852940540, guid: 1577307f328ed3f4991983903d25e234, type: 3}

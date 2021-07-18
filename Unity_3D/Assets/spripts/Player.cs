@@ -10,15 +10,22 @@ public class Player : MonoBehaviour
     private Rigidbody rig;
     private Animator ani;
     private Transform traCamera;
+
     #endregion
 
 
     #region 事件
+    /// <summary>
+    /// 道具管理器
+    /// </summary>
+    private Inventory inventory;
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
         ani = transform.Find("男生").GetComponent<Animator>();
         traCamera = GameObject.Find("攝影機").transform;
+
+        inventory = GameObject.Find("道具管理器").GetComponent<Inventory>();
     }
 
     private void OnDrawGizmos()
@@ -32,6 +39,14 @@ public class Player : MonoBehaviour
     {
         Collection();
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        EatProp(collision.gameObject);
+    }
+
+
+
     #endregion
 
 
@@ -52,6 +67,20 @@ public class Player : MonoBehaviour
                 hit.collider.GetComponent<ObjectCollection>().Hit(1);
             }
         }
+
+
         }
+    /// <summary>
+    /// 吃道具
+    /// </summary>
+    /// <param name="prop">可以吃的道具</param>
+    private void EatProp(GameObject prop)
+    {
+        if (prop.tag == "可以吃的道具")
+        {
+            inventory.AddProp(prop.GetComponent<Prop>());
+       
+        }
+    }
     #endregion
 }
