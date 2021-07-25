@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using System.Linq;
+using System.Collections.Generic;
 
 public class EquipmentManager : MonoBehaviour
 {
     [Header("裝備道具1 - 5")]
     public Transform[] traEquipmentItem;
 
-    
+
     /// <summary>
     /// 當前裝備的編號: 0 - 4
     /// </summary>
@@ -64,5 +66,53 @@ public class EquipmentManager : MonoBehaviour
     {
         traSelectionOutline.SetParent(traEquipmentItem[indexEquipment]);
         rectSelectionOutline.anchoredPosition = Vector2.zero;
+
+        ShowEquipment();
+    }
+    /// <summary>
+    /// 使用過的道具物件資訊
+    /// </summary>
+    public List<GameObject> listUsingItem = new List<GameObject>();
+    /// <summary>
+    /// 顯示裝備
+    /// 還沒用過的裝備升成出來放進資料庫內，已經用過的從資料庫內拿
+    /// 並且顯示在手上調整:座標 角度與尺寸
+    /// </summary>
+    private void ShowEquipment()
+    {
+        Item itemData = inventory.itemDataEquipment[indexEquipment];               //目前的道具資料
+
+        if (itemData.goItem)
+        {
+           //判斷 清單內的道具名稱 是否包含當前選取的道具名稱. 例: 草地(Clone) 包含草地 就表示用過
+            int count = listUsingItem.Where(x => x.name.Contains(itemData.goItem.name)).ToList().Count;
+          
+
+            //隱藏所有使用過的道具
+            for (int i = 0; i < listUsingItem.Count; i++) listUsingItem[i].SetActive(false);
+            
+            // 如果 清單內 沒有使用過此道句 就處理生成
+            if (count == 0)
+            {
+                //還沒使用過先生成
+                GameObject equip = Instantiate(itemData.goItem, traPropPosition);
+                equip.transform.localScale = Vector3.one * 0.3f;
+                equip.transform.localPosition = Vector3.zero;
+
+                listUsingItem.Add(equip);
+            }
+            
+           
+            else
+            {
+                // 否則 就處理 隱藏與顯示
+                print("已經有此道具");
+            }
+         
+
+            print("目前裝備的道具名稱:" + itemData.goItem.name);
+
+            print("使用過的道具名稱:" + listUsingItem[0].name);
+        }
     }
 }
