@@ -108,11 +108,14 @@ public class Inventory : MonoBehaviour
         }
         return true;                                                         //已經塞滿道具
     }
-
+    /// <summary>
+    /// 更新裝備與道具的 Item Class 物件與數量資訊
+    /// </summary>
     private void UpdateItemData(int index, Prop prop, Item[] itemData,int count)
     {
-        itemData[index].goItem = prop.goProp;
-        itemData[index].count = count;
+        itemData[index].goItem = prop.goProp;               //更新取得道具的 道具物件     
+        itemData[index].count = count;                      //更新取得道具的 道具類型
+        itemData[index].count = count;                      //更新取得道具的 道具數量
     }
     /// <summary>
     /// 物件池使用中的道具: 放在遠處

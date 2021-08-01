@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Collection()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !EquipmentManager.instance.usingTerrainObject)
         {
             //射線碰撞資訊
             RaycastHit hit;

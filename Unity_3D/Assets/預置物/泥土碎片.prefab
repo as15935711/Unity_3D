@@ -138,3 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprProp: {fileID: 21300000, guid: e00c618b97b3bfe4fa5dc7a16a356b35, type: 3}
   goProp: {fileID: 2806356451680697377, guid: c6b47ef76e929d7499236c2849661931, type: 3}
+  propType: 1
