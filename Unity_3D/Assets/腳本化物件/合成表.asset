@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90aba222264a4542a7ce0d0bce16304, type: 3}
+  m_Name: "\u5408\u6210\u8868"
+  m_EditorClassIdentifier: 
+  allmergeData:
+  - goMerge:
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    - {fileID: 2806356451680697377, guid: c6b47ef76e929d7499236c2849661931, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    goMergeResult: {fileID: 0}
+  - goMerge:
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    - {fileID: 0}
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    goMergeResult: {fileID: 0}
+  - goMerge:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    - {fileID: 2022250129256125486, guid: 04a5f820645ddfa489dd79355bff0139, type: 3}
+    goMergeResult: {fileID: 0}

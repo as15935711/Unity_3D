@@ -173,14 +173,14 @@ public class EquipmentManager : MonoBehaviour
         for (int i = 0; i < listUsingItem.Count; i++) listUsingItem[i].SetActive(false);
 
         Item itemData = inventory.itemDataEquipment[indexEquipment];               //目前的道具資料
+        //不管道具使否為空的 都要更新 類型
+         //如果道具不是地型物件類型 就不是使用地型物件
+        if (itemData.propType != PropType.TerrainObject) usingTerrainObject = false;           //不是使用地型物件
+        else if (itemData.propType == PropType.TerrainObject) usingTerrainObject = true;        //是使用地型物件
 
-     
+        //如果有道具物件 才更新道具資訊ㄋ
         if (itemData.goItem)
         {
-            //如果道具不是地型物件類型 就不是使用地型物件
-            if (itemData.propType != PropType.TerrainObject) usingTerrainObject = false;           //不是使用地型物件
-            else if (itemData.propType == PropType.TerrainObject) usingTerrainObject = true;        //是使用地型物件
-
            //判斷 清單內的道具名稱 是否包含當前選取的道具名稱. 例: 草地(Clone) 包含草地 就表示用過
             int count = listUsingItem.Where(x => x.name.Contains(itemData.goItem.name)).ToList().Count;
     
