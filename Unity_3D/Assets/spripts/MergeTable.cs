@@ -1,5 +1,8 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
+
+/// <summary>
+/// 合成表：儲存所有合成方式
+/// </summary>
 [CreateAssetMenu(fileName = "合成表", menuName = "KAI/合成表")]
 public class MergeTable : ScriptableObject
 {

@@ -18,7 +18,7 @@ public class InventorySwitch : MonoBehaviour
     [Header("事件系統 : EventSystem")]
     public EventSystem eventSystem;
     [Header("素材1 ~ 4")]
-    public Item[] imerMerge;
+    public Item[] itemMerge;
     [Header("合成表")]
     public MergeTable mergeTable;
     /// <summary>
@@ -111,7 +111,13 @@ public class InventorySwitch : MonoBehaviour
         }
         #endregion
     }
-
+    /// <summary>
+    /// 更新道具資訊：圖片、數量、道具物件、類型
+    /// </summary>
+    /// <param name="chooseInventory"></param>
+    /// <param name="updateInventoryr"></param>
+    /// <param name="chooseItem"></param>
+    /// <param name="updateItem"></param>
     private void UpdateItem(InventoryItem chooseInventory, InventoryItem updateInventoryr, Item chooseItem, Item updateItem)
     {
 
@@ -165,11 +171,16 @@ public class InventorySwitch : MonoBehaviour
         CheckMergeData();
         EquipmentManager.instance.ShowEquipment();
     }
+    /// <summary>
+    /// 每次放完素材後處理
+    /// 檢查目前合成素材在合成表內是否有相同的資料
+    /// </summary>
     private void CheckMergeData()
-    { 
+    {
+        // 將合成區素材存放到陣列內
         for (int i = 0; i < itemMerge.Length; i++)
         {
-            goMergeCurrent[i] = itemMerge[i].goItem;
+           goMergeCurrent[i] = itemMerge[i].goItem;
         }
     }
     #endregion
